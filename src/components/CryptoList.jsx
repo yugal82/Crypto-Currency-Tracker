@@ -14,36 +14,55 @@ const useStyles = makeStyles(() => ({
 const CryptoList = () => {
     const classes = useStyles();
 
-    const [coinData, setCoinData] = useState([])
-
+    const [coinData, setCoinData] = useState([]);
+    const [slicedData, setSlicedData] = useState([])
+    // const [page, setPage] = useState(1);
+    const [firstRender, setFirstRender] = useState(false);
+    
     const fetchCoins = async () => {
         const res = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&price_change_percentage=1h%2C24h%2C7d%2C30d');
         const data = await res.json();
         setCoinData(data);
     }
 
+
+    const handlePageChange = (e, value) => {
+        setFirstRender(false);
+        // setPage(value);
+        const slicedCoinData = coinData.slice((value - 1) * 10, (value - 1) * 10 + 10);
+        // console.log(slicedCoinData);
+        setSlicedData(slicedCoinData);
+        window.scroll(0,450);
+    }
+
     useEffect(() => {
         fetchCoins();
+        setFirstRender(true);
     }, [])
 
     return (
         <>
             <div className='coin-list'>
                 <div className="coin-list-heading">
-                    <h3>Cryptocurrency price by Market price</h3>
+                    <h3>Top 100 <span>Crypto Currency</span></h3>
                 </div>
                 <div className="coin-table">
                     <div className="coin-info-row">
-                        <div className="coin-name">Coin </div>
+                        <div className="coin-name">Coin</div>
                         <div className="coin-price">Price</div>
                         <div className="coin-24h-change">24h Change</div>
                         <div className="coin-market-cap">Market cap</div>
                     </div>
                 </div>
                 <div className="coin-table-list">
-                    {coinData.map((coin, index) => (
-                        <CryptoCard coinInfo={coin} key={index} i={index} />
-                    ))}
+                    {
+                        firstRender ? coinData.slice(0,10).map((coin, index) => (
+                            <CryptoCard coinInfo={coin} key={index} />
+                        )) :
+                        slicedData.map((coin, index) => (
+                            <CryptoCard coinInfo={coin} key={index} />
+                        ))
+                    }
                 </div>
                 <Pagination
                     style={{
@@ -56,6 +75,7 @@ const CryptoList = () => {
                     color='primary'
                     variant='outlined'
                     // defaultPage={1}
+                    onChange={handlePageChange}
                 />
             </div>
         </>

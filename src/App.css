@@ -150,6 +150,9 @@ a {
 .coin-list-heading h3{
   font-weight: 450;
 }
+.coin-list-heading span{
+  color: #FFD700;
+}
 
 .coin-info-row{
   display: grid;

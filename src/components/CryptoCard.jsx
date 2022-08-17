@@ -1,13 +1,12 @@
 import React from 'react'
 
 const CryptoCard = (props) => {
-    // console.log('card.js', props.coinInfo);
     let profit = props.coinInfo.price_change_percentage_24h_in_currency >= 0
 
     const priceWithCommas = (price) => {
         return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
-    console.log(props.coinInfo);
+    
     return (
         <div className="coin-info-row coin-card">
             <div className="coin-name">
