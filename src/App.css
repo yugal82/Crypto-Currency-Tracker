@@ -106,6 +106,12 @@ a {
   margin-bottom: 10px;
 }
 
+.carousel-coin-price, .carousel-coin span{
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
 /* coin-list css */
 .coin-list{
   margin-top: 2rem;

@@ -4,7 +4,7 @@ const Header = () => {
     return (
         <div className='container-fluid header'>
             <div className="logo-name">
-                <h2>Crypto Hunter</h2>
+                <h2>Cryptopedia</h2>
             </div>
         </div>
     )

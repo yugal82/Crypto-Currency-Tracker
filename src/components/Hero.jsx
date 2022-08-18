@@ -14,7 +14,7 @@ const Hero = () => {
                 <Container>
                     <div className="hero-content">
                         <div className="hero-heading">
-                            <h3>Crypto Hunter</h3>
+                            <h3>Cryptopedia</h3>
                             <p>Get all the price info and tracking of your favorite Crypto-currency</p>
                         </div>
                         <div className="hero-carousel">

@@ -28,7 +28,7 @@ const CryptoList = () => {
         setInputVal(value);
 
         const filterCoins = coinData.filter((coin) =>
-            coin.name.toLowerCase().includes(value.toLowerCase())
+            coin.name.toLowerCase().includes(value.toLowerCase()) || coin.symbol.toLowerCase().includes(value.toLowerCase())
         )
 
         setFilterData(filterCoins);
