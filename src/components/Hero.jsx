@@ -1,12 +1,15 @@
-import { Container, makeStyles } from '@material-ui/core'
+import { Container } from '@material-ui/core'
 import React from 'react'
 import Carousel from './Carousel'
+import Header from './Header'
 
 
 
 const Hero = () => {
     return (
         // <div className='container-fluid hero'>
+        <>
+            <Header />
             <div className="banner">
                 <Container>
                     <div className="hero-content">
@@ -20,6 +23,7 @@ const Hero = () => {
                     </div>
                 </Container>
             </div>
+        </>
         // </div>
 
     )

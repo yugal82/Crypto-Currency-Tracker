@@ -3,6 +3,7 @@ import CryptoList from '../components/CryptoList'
 import Hero from '../components/Hero'
 
 const HomePage = () => {
+
   return (
     <>
         <Hero />

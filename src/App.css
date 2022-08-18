@@ -17,6 +17,14 @@ body {
   color: #fff;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
 .container-fluid {
   width: 100%;
 }
@@ -45,44 +53,6 @@ a {
   font-weight: 500;
 }
 
-.search-box {
-  margin-right: 2rem;
-  
-}
-
-.search-box input {
-  width: 300px;
-  padding: .5rem 1rem;
-  position: relative;
-  background: #14161A;
-  outline: none;
-  border: 1px solid rgb(158, 158, 158);
-  border-radius: .5rem;
-  cursor: pointer;
-  transition: all .3s ease; 
-  color: #FFD700;
-}
-
-.search-box input:focus {
-  border: 2px solid #fff;
-  color: #fff;
-  transform: scale(1.09);
-}
-
-.search-box input:hover {
-  border: 1px solid #fff;
-}
-
-.search-box input::placeholder {
-  color: #FFD700;
-}
-
-.search-box i {
-  position: absolute;
-  top: 1.63rem;
-  right: 4rem;
-  font-size: .9rem;
-}
 
 /* header css end */
 
@@ -196,4 +166,41 @@ a {
 
 .coin-name-info span{
   text-transform: uppercase;
+}
+.search-box {
+  margin-right: 2rem;
+}
+
+.search-box input {
+  width: 102.5%;
+  padding: 1rem 1.5rem;
+  position: relative;
+  background: #14161A;
+  outline: none;
+  border: 1px solid rgb(158, 158, 158);
+  border-radius: .5rem;
+  cursor: pointer;
+  transition: all .3s ease; 
+  color: #FFD700;
+  margin-bottom: 1rem;
+}
+
+.search-box input:focus {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.search-box input:hover {
+  border: 1px solid #fff;
+}
+
+.search-box input::placeholder {
+  color: #FFD700;
+}
+
+.search-box i {
+  position: absolute;
+  top: 1.63rem;
+  right: 4rem;
+  font-size: .9rem;
 }
