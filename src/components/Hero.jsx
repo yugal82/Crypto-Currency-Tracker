@@ -1,6 +1,6 @@
 import { Container } from '@material-ui/core'
 import React from 'react'
-import Carousel from './Carousel'
+import CarouselComponent from './CarouselComponent'
 import Header from './Header'
 
 
@@ -18,7 +18,7 @@ const Hero = () => {
                             <p>Get all the price info and tracking of your favorite Crypto-currency</p>
                         </div>
                         <div className="hero-carousel">
-                            <Carousel />
+                            <CarouselComponent />
                         </div>
                     </div>
                 </Container>
