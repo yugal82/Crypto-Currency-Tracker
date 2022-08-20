@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import Header from '../components/Header'
 import ReactHtmlParser from 'react-html-parser';
 import { LinearProgress } from '@material-ui/core';
+import CoinChart from '../components/CoinChart';
 
 const CoinPage = () => {
   const { id } = useParams();
@@ -44,7 +45,7 @@ const CoinPage = () => {
           </div>
 
         </div>
-        <div className="chart-section">chart</div>
+        <CoinChart coin={coinData} />
       </div>
     </>
   )

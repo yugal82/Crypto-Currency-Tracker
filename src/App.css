@@ -217,6 +217,7 @@ a {
 /* coinpage css */
 .coin-page{
   display: flex;
+  margin: 2rem 0;
 }
 
 .sidebar-section{
@@ -254,4 +255,43 @@ a {
 .market-info span{
   font-weight: 400;
   font-size: 1.3rem;
+}
+
+
+/* chart css */
+
+.chart-container{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3rem;
+}
+
+.time-line-button{
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.btn{
+  width: 25%;
+  background-color: #14161A;
+  padding: .5rem 1rem;
+  margin: 0 1rem;
+  color: #fff;
+  font-weight: 700;
+  border-radius: .5rem;
+  border: 1px solid #FFD700;
+  text-align: center;
+  cursor: pointer;
+  transition: all .2s ease-in;
+}
+
+.btn:hover{
+  background-color: #FFD700;
+  color: #14161A;
 }
