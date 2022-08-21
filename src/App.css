@@ -72,7 +72,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3rem 0;
+  padding-top: 3rem ;
 }
 .hero-content .hero-heading{
   margin-bottom: 4rem;
@@ -90,11 +90,9 @@ a {
   color: rgb(158, 158, 158);
 }
 
-.hero-carousel{
-  padding: 0 3rem;
-  margin: 0 10% !important;
+.caraousel-card{
+  padding-bottom:  3rem; ;
 }
-
 .carousel-coin{
   display: flex;
   flex-direction: column;

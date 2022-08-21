@@ -17,9 +17,9 @@ const Hero = () => {
                             <h3>Cryptopedia</h3>
                             <p>Get all the price info and tracking of your favorite Crypto-currency</p>
                         </div>
-                        <div className="hero-carousel">
+                        {/* <div className="hero-carousel">
                             <CarouselComponent />
-                        </div>
+                        </div> */}
                     </div>
                 </Container>
             </div>

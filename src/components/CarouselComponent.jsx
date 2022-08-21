@@ -56,7 +56,7 @@ const CarouselComponent = () => {
             items: 2,
         },
         1024: {
-            items: 7,
+            items: 4,
         }
     }
 
@@ -76,7 +76,7 @@ const CarouselComponent = () => {
     // };
 
     return (
-        <div className='caraousel-card'>
+        <div className='caraousel-card banner'>
             <AliceCarousel
                 mouseTracking
                 infinite={true}
