@@ -6,7 +6,7 @@ import CryptoCard from './CryptoCard';
 const useStyles = makeStyles(() => ({
     pagination: {
         "& .MuiPaginationItem-root": {
-            color: 'white',
+            color: 'black',
         },
     }
 }))

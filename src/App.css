@@ -13,8 +13,8 @@ html {
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background: #14161A;
-  color: #fff;
+  background: #fff;
+  color: #14161A;
 }
 
 ::-webkit-scrollbar {
@@ -22,7 +22,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #14161A;
 }
 
 .container-fluid {
@@ -34,8 +34,8 @@ body {
 }
 
 a {
-  text-decoration: none;
-  color: #FFD700;
+  text-decoration: none ;
+  color: blue;
 }
 
 /* header css */
@@ -45,14 +45,15 @@ a {
   justify-content: space-between;
   padding: 1rem;
   /* background-color: #14161A; */
-  color: #FFD700;
+  color: #14161A;
   position: static;
-  box-shadow: 0px 2px 5px 2px #000;
+  box-shadow: 0px 2px 5px 2px #eee  ;
 }
 
 .logo-name h2 {
   font-size: 1.5rem;
   font-weight: 500;
+  color: #14161A;
 }
 
 
@@ -127,17 +128,18 @@ a {
   font-weight: 450;
 }
 .coin-list-heading span{
-  color: #FFD700;
+  color: #14161A;
 }
 
 .coin-info-row{
   display: grid;
   grid-template-columns: 3fr 1fr 1fr 1fr;
-  background-color: #FFD700;
-  color: #16171A;
+  background-color: #14161A;
+  color: #fff;
   font-weight: 600;
   font-size: 1.1rem;
   padding: 1rem 2rem;
+  border-bottom: 1px solid rgb(158, 158, 158);
   border-top-right-radius: .5rem;
   border-top-left-radius: .5rem;
 }
@@ -187,7 +189,7 @@ a {
   border-radius: .5rem;
   cursor: pointer;
   transition: all .3s ease; 
-  color: #FFD700;
+  color: #14161A;
   margin-bottom: 1rem;
 }
 
@@ -198,10 +200,6 @@ a {
 
 .search-box input:hover {
   border: 1px solid #fff;
-}
-
-.search-box input::placeholder {
-  color: #FFD700;
 }
 
 .search-box i {
@@ -283,13 +281,13 @@ a {
   color: #fff;
   font-weight: 700;
   border-radius: .5rem;
-  border: 1px solid #FFD700;
   text-align: center;
   cursor: pointer;
   transition: all .2s ease-in;
 }
 
 .btn:hover{
-  background-color: #FFD700;
+  background-color: #fff;
   color: #14161A;
+  border: 1px solid #14161A;
 }
