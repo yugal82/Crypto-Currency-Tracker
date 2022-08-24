@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
-import Header from '../components/Header'
 import ReactHtmlParser from 'react-html-parser';
 import { LinearProgress } from '@material-ui/core';
 import CoinChart from '../components/CoinChart';
@@ -30,7 +29,6 @@ const CoinPage = () => {
 
   return (
     <>
-      <Header />
       <div className='coin-page container-fluid'>
         <div className="sidebar-section">
           <div className="coin-info">

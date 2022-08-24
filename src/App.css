@@ -28,26 +28,30 @@ body {
 .container-fluid {
   width: 100%;
 }
-.container{
+
+.container {
   width: 100%;
   margin: 0 auto;
 }
 
 a {
-  text-decoration: none ;
+  text-decoration: none;
   color: blue;
+}
+
+li {
+  list-style: none;
 }
 
 /* header css */
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 1rem;
   /* background-color: #14161A; */
   color: #14161A;
   position: static;
-  box-shadow: 0px 2px 5px 2px #eee  ;
+  box-shadow: 0px 2px 5px 2px #eee;
 }
 
 .logo-name h2 {
@@ -56,6 +60,16 @@ a {
   color: #14161A;
 }
 
+.nav-links ul li {
+  padding: .3rem 1rem;
+  margin-left: 2rem;
+}
+
+.nav-links ul li a {
+  color: #14161A;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
 
 /* header css end */
 
@@ -73,65 +87,74 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 3rem ;
+  padding-top: 3rem;
 }
-.hero-content .hero-heading{
+
+.hero-content .hero-heading {
   margin-bottom: 4rem;
 }
-.hero-content .hero-heading h3{
+
+.hero-content .hero-heading h3 {
   font-size: 3.2rem;
   text-align: center;
   margin-bottom: 1rem;
   font-weight: bolder;
 }
 
-.hero-content .hero-heading p{
+.hero-content .hero-heading p {
   font-size: .9rem;
   font-weight: 300;
   color: rgb(158, 158, 158);
 }
 
-.caraousel-card{
-  padding-bottom:  3rem; ;
+.caraousel-card {
+  padding-bottom: 3rem;
+  ;
 }
-.carousel-coin{
+
+.carousel-coin {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-transform: uppercase;
   cursor: pointer;
 }
-.carousel-coin img{
+
+.carousel-coin img {
   height: 80px;
   width: 80px;
   margin-bottom: 10px;
 }
 
-.carousel-coin-price, .carousel-coin span{
+.carousel-coin-price,
+.carousel-coin span {
   color: #fff;
   font-size: 1.2rem;
   font-weight: 500;
 }
 
 /* coin-list css */
-.coin-list{
+.coin-list {
   margin-top: 2rem;
   padding: 0 2rem;
 }
-.coin-list-heading{
+
+.coin-list-heading {
   text-align: center;
   font-size: 2rem;
   margin: 2rem 0;
 }
 
-.coin-list-heading h3{
+.coin-list-heading h3 {
   font-weight: 450;
 }
-.coin-list-heading span{
+
+.coin-list-heading span {
   color: #14161A;
 }
 
-.coin-info-row{
+.coin-info-row,
+.exchange-info-row {
   display: grid;
   grid-template-columns: 3fr 1fr 1fr 1fr;
   background-color: #14161A;
@@ -144,37 +167,40 @@ a {
   border-top-left-radius: .5rem;
 }
 
-.coin-card{
+.coin-card {
   border-radius: 0px;
   background: #14161A;
   color: #fff;
   border-bottom: 1px solid rgb(158, 158, 158);
 }
 
-.coin-price, .coin-24h-change, .coin-market-cap{
+.coin-price,
+.coin-24h-change,
+.coin-market-cap {
   margin: auto 0;
 }
 
-.coin-name{
+.coin-name {
   display: flex;
   align-items: center;
 }
 
-.coin-image{
+.coin-image {
   width: 56px;
   height: 56px;
   margin-right: 1rem;
 }
 
-.coin-name-info p{
+.coin-name-info p {
   font-size: 1rem;
   font-weight: 400;
   margin-top: .1rem;
 }
 
-.coin-name-info span{
+.coin-name-info span {
   text-transform: uppercase;
 }
+
 .search-box {
   margin-right: 2rem;
 }
@@ -188,7 +214,7 @@ a {
   border: 1px solid rgb(158, 158, 158);
   border-radius: .5rem;
   cursor: pointer;
-  transition: all .3s ease; 
+  transition: all .3s ease;
   color: #14161A;
   margin-bottom: 1rem;
 }
@@ -211,44 +237,50 @@ a {
 
 
 /* coinpage css */
-.coin-page{
+.coin-page {
   display: flex;
   margin: 2rem 0;
 }
 
-.sidebar-section{
+.sidebar-section {
   width: 30%;
   padding: 1.5rem;
   border-right: 2px solid gray;
 }
-.coin-info{
+
+.coin-info {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.coin-info img{
+
+.coin-info img {
   width: 60%;
   height: 60%;
   /* margin-bottom: 1rem; */
 }
-.coin-info h2{
+
+.coin-info h2 {
   font-size: 3rem;
   margin: 1rem 0;
 }
-.description{
+
+.description {
   font-size: 1.1rem;
   letter-spacing: 1px;
   margin-bottom: 1rem;
   font-weight: 500;
   word-spacing: .5rem;
 }
-.market-info p{
+
+.market-info p {
   font-size: 1.5rem;
   font-weight: 500;
   margin-bottom: 1rem;
 }
-.market-info span{
+
+.market-info span {
   font-weight: 400;
   font-size: 1.3rem;
 }
@@ -256,7 +288,7 @@ a {
 
 /* chart css */
 
-.chart-container{
+.chart-container {
   width: 70%;
   display: flex;
   flex-direction: column;
@@ -265,7 +297,7 @@ a {
   padding: 0 3rem;
 }
 
-.time-line-button{
+.time-line-button {
   width: 100%;
   margin-top: 2rem;
   display: flex;
@@ -273,7 +305,7 @@ a {
   justify-content: space-evenly;
 }
 
-.btn{
+.btn {
   width: 25%;
   background-color: #14161A;
   padding: .5rem 1rem;
@@ -286,8 +318,56 @@ a {
   transition: all .2s ease-in;
 }
 
-.btn:hover{
+.btn:hover {
   background-color: #fff;
   color: #14161A;
   border: 1px solid #14161A;
+}
+
+/* exchange page css */
+.exchange-page {
+  padding: 3rem;
+}
+
+.exchange-page .exchange-table{
+  margin-top: 2rem;
+}
+
+.exchange-info-row {
+  grid-template-columns: .5fr 3fr 1fr;
+}
+
+.exchange-name, .exchange-rank {
+  display: flex;
+  align-items: center;
+}
+
+.btc-24h-vol small {
+  display: block;
+  font-size: small;
+  text-align: center;
+  color: #eee;
+  font-weight: 400;
+}
+.btc-24h-vol span{
+  display: block;
+  text-align: center;
+}
+
+.exchange-card{
+  border-radius: 0px;
+}
+
+.exchange-img-name, .rank, .volume-trade{
+  display: flex;
+  align-items: center;
+}
+
+.exchange-img-name h4{
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.volume-trade{
+  justify-content: center;
 }

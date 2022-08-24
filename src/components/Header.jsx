@@ -9,6 +9,13 @@ const Header = () => {
                     <h2>Cryptopedia</h2>
                 </div>  
             </Link>
+            <div className="nav-links">
+                <ul>
+                    <li>
+                        <a href="/exchanges">Exchanges</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     )
 }

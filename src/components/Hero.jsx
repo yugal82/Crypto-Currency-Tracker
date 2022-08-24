@@ -1,15 +1,11 @@
 import { Container } from '@material-ui/core'
 import React from 'react'
-import CarouselComponent from './CarouselComponent'
-import Header from './Header'
-
-
+// import CarouselComponent from './CarouselComponent'
 
 const Hero = () => {
     return (
         // <div className='container-fluid hero'>
         <>
-            <Header />
             <div className="banner">
                 <Container>
                     <div className="hero-content">
