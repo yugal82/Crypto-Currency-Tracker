@@ -12,7 +12,13 @@ const Header = () => {
             <div className="nav-links">
                 <ul>
                     <li>
+                        <Link to="/">Coins</Link>
+                    </li>
+                    <li>
                         <Link to="/exchanges">Exchanges</Link>
+                    </li>
+                    <li>
+                        <Link to="/nft-collection">Explore NFTs</Link>
                     </li>
                 </ul>
             </div>

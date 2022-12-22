@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import Exchanges from './Pages/Exchanges';
 import Header from './components/Header';
+import NftCollectionPage from './Pages/NftCollectionPage';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path='/' element={<HomePage />}></Route>
           <Route path='/coins/:id' element={<CoinPage />}></Route>
           <Route path='/exchanges' element={<Exchanges />}></Route>
+          <Route path='/nft-collection' element={<NftCollectionPage />}></Route>
         </Routes>
       </div>
     </Router>

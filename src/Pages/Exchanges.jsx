@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import ExchangeCard from '../components/ExchangeCard'
+import ExchangeCard from '../components/exchanges/ExchangeCard'
 
 const Exchanges = () => {
     const [exchangesData, setExchangesData] = useState([]);

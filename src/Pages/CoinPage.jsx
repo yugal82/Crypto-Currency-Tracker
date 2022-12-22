@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import ReactHtmlParser from 'react-html-parser';
 import { LinearProgress } from '@material-ui/core';
-import CoinChart from '../components/CoinChart';
+import CoinChart from '../components/crypto-currency/CoinChart';
 
 const CoinPage = () => {
   const { id } = useParams();

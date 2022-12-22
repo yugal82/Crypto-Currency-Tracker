@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { CircularProgress } from '@material-ui/core'
 import { Line } from 'react-chartjs-2'
-import Button from './Button'
+import Button from '../Button'
 
 // https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=${days}
 const CoinChart = ({ coin }) => {

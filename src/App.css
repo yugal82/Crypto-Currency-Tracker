@@ -47,6 +47,7 @@ li {
 .header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 1rem;
   /* background-color: #14161A; */
   color: #14161A;
@@ -60,9 +61,18 @@ li {
   color: #14161A;
 }
 
+.nav-links ul{
+  display: flex;
+}
+
 .nav-links ul li {
   padding: .3rem 1rem;
-  margin-left: 2rem;
+  /* margin-left: 2rem; */
+  transition: all .3s ease-out;
+}
+
+.nav-links ul li:hover {
+  transform: scale(1.1);
 }
 
 .nav-links ul li a {
@@ -371,3 +381,13 @@ li {
 .volume-trade{
   justify-content: center;
 }
+
+/* NFT Collection page starts */
+.collection_header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+/* NFT Collection page ends */
