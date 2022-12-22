@@ -36,7 +36,7 @@ body {
 
 a {
   text-decoration: none;
-  color: blue;
+  color: #000;
 }
 
 li {
@@ -390,4 +390,39 @@ li {
   padding: 2rem 0;
 }
 
+.collection_container{
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  row-gap: 1.5rem;
+}
+
+.collection_card{
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  height: 340px;
+  border-radius: .5rem;
+  border: 2px solid #333;
+}
+
+.collection_card .collection_img,
+.collection_card .collection_img img{
+  width: 100%;
+  height: 280px;
+  background: rgb(222, 222, 222);
+  border-top-right-radius: .5rem;
+  border-top-left-radius: .5rem;
+  border-bottom: 2px solid #333;
+}
+
+.collection_card .collection_name{
+  padding: .6rem .5rem;
+  display: flex;
+}
+
+.collection_card .collection_name span{
+  font-size: 18px;
+  font-weight: 600;
+}
 /* NFT Collection page ends */

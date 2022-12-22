@@ -1,16 +1,16 @@
-
+import React from 'react';
 import './App.css';
-import HomePage from './Pages/HomePage';
-import CoinPage from './Pages/CoinPage';
 import {
   BrowserRouter as Router,
   Routes,
   Route,
-  // Link
 } from "react-router-dom";
-import Exchanges from './Pages/Exchanges';
 import Header from './components/Header';
-import NftCollectionPage from './Pages/NftCollectionPage';
+const CoinPage = React.lazy(() => import('./Pages/CoinPage'));
+const HomePage = React.lazy(() => import('./Pages/HomePage'));
+const Exchanges = React.lazy(() => import('./Pages/Exchanges'));
+const NftCollectionPage = React.lazy(() => import('./Pages/NftCollectionPage'));
+const SingleCollection = React.lazy(() => import('./Pages/SingleCollection'));
 
 function App() {
   return (
@@ -18,10 +18,61 @@ function App() {
       <div className="App">
         <Header />
         <Routes>
-          <Route path='/' element={<HomePage />}></Route>
-          <Route path='/coins/:id' element={<CoinPage />}></Route>
-          <Route path='/exchanges' element={<Exchanges />}></Route>
-          <Route path='/nft-collection' element={<NftCollectionPage />}></Route>
+          <Route
+            exact
+            path='/'
+            element={
+              <React.Suspense
+                fallback='Loading'
+              >
+                <HomePage />
+              </React.Suspense>
+            }
+          />
+          <Route
+            exact
+            path='/coins/:id'
+            element={
+              <React.Suspense
+                fallback='Loading'
+              >
+                <CoinPage />
+              </React.Suspense>
+            }
+          />
+          <Route
+            exact
+            path='/exchanges'
+            element={
+              <React.Suspense
+                fallback='Loading'
+              >
+                <Exchanges />
+              </React.Suspense>
+            }
+          />
+          <Route
+            exact
+            path='/nft-collection'
+            element={
+              <React.Suspense
+                fallback='Loading'
+              >
+                <NftCollectionPage />
+              </React.Suspense>
+            }
+          />
+          <Route
+            exact
+            path='/nft-collection/:contract_address'
+            element={
+              <React.Suspense
+                fallback='Loading'
+              >
+                <SingleCollection />
+              </React.Suspense>
+            }
+          />
         </Routes>
       </div>
     </Router>
