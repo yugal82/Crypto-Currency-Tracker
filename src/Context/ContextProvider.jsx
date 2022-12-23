@@ -1,33 +1,48 @@
-import React, { createContext, useState, useEffect } from 'react';
+import React, { createContext } from 'react';
 
 export const context = createContext();
 
+const BLOCK_SPAN_OPTIONS = {
+    method: 'GET',
+    headers: {
+        "Content-Type": "application/json",
+        "X-API-KEY": "8SXGNzbNnvbo3QnkWXDVYiYQLXGcDl24"
+    }
+}
+
+const BLOCK_DAEMON_OPTIONS = {
+    method: 'GET',
+    headers: {
+        "Content-Type": "application/json",
+        authorization: `Bearer Ok-kPy1Xuy04MIozGNgbYUgN1brBgOgIDRGC1xAYZDwdSOBA`
+    }
+}
+
 const ContextProvider = ({ children }) => {
 
-    const [allCollections, setAllCollections] = useState([]);
-
     const getAllNFTCollection = async () => {
-        const options = {
-            method: 'GET',
-            headers: {
-                "Content-Type": "application/json",
-                // 'X-API-KEY': process.env.BLOCK_SPAN_API
-                "X-API-KEY": "8SXGNzbNnvbo3QnkWXDVYiYQLXGcDl24"
-            }
-        }
         const url = 'https://api.blockspan.com/v1/exchanges/collections?chain=eth-main&exchange=opensea&page_size=16';
-        const res = await fetch(url, options);
+        const res = await fetch(url, BLOCK_SPAN_OPTIONS);
         const data = await res.json();
-        console.log(data);
-        setAllCollections(data);
+        return data;
     }
 
-    useEffect(() => {
-        getAllNFTCollection();
-    }, [])
+    const getContractDetails = async (contract_address) => {
+        const url = `https://svc.blockdaemon.com/nft/v1/ethereum/mainnet/collection?contract_address=${contract_address}`;
+        const res = await fetch(url, BLOCK_DAEMON_OPTIONS);
+        const data = await res.json();
+        return data;
+    }
+
+    const getAssetsForAddress = async (contract_address) => {
+        const url = `https://svc.blockdaemon.com/nft/v1/ethereum/mainnet/assets?contract_address=${contract_address}`;
+        const res = await fetch(url, BLOCK_DAEMON_OPTIONS);
+        const data = await res.json();
+        console.log(data);
+    }
 
     return (
-        <context.Provider value={{ getAllNFTCollection, allCollections }}>
+        <context.Provider value={{ getAllNFTCollection, getContractDetails, getAssetsForAddress }}>
             {children}
         </context.Provider>
     )
