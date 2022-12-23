@@ -39,4 +39,4 @@ const CryptoCard = (props) => {
     )
 }
 
-export default CryptoCard
+export default CryptoCard;

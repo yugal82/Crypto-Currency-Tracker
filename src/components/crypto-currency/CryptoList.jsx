@@ -17,14 +17,12 @@ const CryptoList = () => {
 
     const [coinData, setCoinData] = useState([]);
     const [slicedData, setSlicedData] = useState([])
-    // const [page, setPage] = useState(1);
     const [firstRender, setFirstRender] = useState(false);
     const [inputVal, setInputVal] = useState('');
     const [filterData, setFilterData] = useState([])
 
     const handleOnChange = (e) => {
         const value = e.target.value;
-        // console.log(value);
         setInputVal(value);
 
         const filterCoins = coinData.filter((coin) =>
@@ -44,9 +42,7 @@ const CryptoList = () => {
 
     const handlePageChange = (e, value) => {
         setFirstRender(false);
-        // setPage(value);
         const slicedCoinData = coinData.slice((value - 1) * 10, (value - 1) * 10 + 10);
-        // console.log(slicedCoinData);
         setSlicedData(slicedCoinData);
         window.scroll(0, 450);
     }
@@ -69,7 +65,6 @@ const CryptoList = () => {
                         defaultValue={inputVal}
                         onChange={handleOnChange}
                     />
-                    {/* <i class="fa-solid fa-magnifying-glass"></i> */}
                 </div>
                 <div className="coin-table">
                     <div className="coin-info-row">
@@ -106,7 +101,6 @@ const CryptoList = () => {
                     count={10}
                     color='primary'
                     variant='outlined'
-                    // defaultPage={1}
                     onChange={handlePageChange}
                 />
             </div>
@@ -114,4 +108,4 @@ const CryptoList = () => {
     )
 }
 
-export default CryptoList
+export default CryptoList;

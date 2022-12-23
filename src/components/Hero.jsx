@@ -1,10 +1,8 @@
 import { Container } from '@material-ui/core'
 import React from 'react'
-// import CarouselComponent from './CarouselComponent'
 
 const Hero = () => {
     return (
-        // <div className='container-fluid hero'>
         <>
             <div className="banner">
                 <Container>
@@ -13,16 +11,12 @@ const Hero = () => {
                             <h3>Cryptopedia</h3>
                             <p>Get all the price info and tracking of your favorite Crypto-currency</p>
                         </div>
-                        {/* <div className="hero-carousel">
-                            <CarouselComponent />
-                        </div> */}
                     </div>
                 </Container>
             </div>
         </>
-        // </div>
 
     )
 }
 
-export default Hero
+export default Hero;

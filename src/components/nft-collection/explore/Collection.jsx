@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { context } from '../../../Context/ContextProvider';
 import CollectionCard from '../CollectionCard';
+import CollectionCardFilter from '../CollectionCardFilter';
 
 const Collection = () => {
 
@@ -26,21 +27,26 @@ const Collection = () => {
     const url = `https://svc.blockdaemon.com/nft/v1/ethereum/mainnet/collections/search?name=${query}`;
     const res = await fetch(url, options);
     const data = await res.json();
-    // console.log(data);
     return data.data;
+  }
+
+  const filterSearchedCollections = (collections) => {
+    const filteredCollections = collections.filter((collection) => {
+      if (collection?.logo) return collection;
+    })
+    setSearchedCollections(filteredCollections);
   }
 
   const handleOnChange = async (e) => {
     const value = e.target.value;
-    // console.log(value);
     setInputVal(value);
-    const filterCollections = await getCollectionsBySearch(value);
-    console.log(filterCollections);
-    setSearchedCollections(filterCollections);
+    const searchResult = await getCollectionsBySearch(value);
+    filterSearchedCollections(searchResult);
   }
 
   useEffect(() => {
     fetchCollections();
+    // eslint-disable-next-line
   }, [])
 
 
@@ -53,18 +59,17 @@ const Collection = () => {
         <div className="search-box">
           <input
             type="text"
-            placeholder='Search for you favorite crypto...'
+            placeholder='Search NFT Collection here...'
             defaultValue={inputVal}
             onChange={handleOnChange}
           />
-          {/* <i class="fa-solid fa-magnifying-glass"></i> */}
         </div>
       </div>
       <div className='collection_container'>
         {
-          searchedCollections ? (
+          inputVal !== '' ? (
             searchedCollections?.map((collection) => (
-              <CollectionCard collection={collection} />
+              <CollectionCardFilter collection={collection} />
             ))
           ) : (
             allCollections?.map((collection) => (

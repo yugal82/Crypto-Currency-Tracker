@@ -5,36 +5,18 @@ import { context } from '../../../Context/ContextProvider'
 const CollectionDetails = () => {
   const params = useParams()
 
-  const { getContractDetails, getAssetsForAddress } = useContext(context);
+  const { getContractDetails } = useContext(context);
 
   const [collectionDetail, setCollectionDetail] = useState();
-  // const [imageUrl, setImageUrl] = useState('');
 
   const fetchContractDetails = async () => {
     const result = await getContractDetails(params.contract_address);
     setCollectionDetail(result);
   }
 
-
-  // const getMedia = async () => {
-  //   const options = {
-  //     method: 'GET',
-  //     headers: {
-  //       "Content-Type": "image/png",
-  //       authorization: `Bearer Ok-kPy1Xuy04MIozGNgbYUgN1brBgOgIDRGC1xAYZDwdSOBA`
-  //     }
-  //   }
-  //   const url = `https://svc.blockdaemon.com/nft/v1/ethereum/mainnet/media/${collectionDetail?.collection.logo}`;
-  //   const res = await fetch(url, options);
-  //   const image = await res.blob();
-  // }
-  const getNFTSOfCollections = () => {
-    getAssetsForAddress(params.context);
-  }
-
   useEffect(() => {
-    // getNFTSOfCollections()
     fetchContractDetails();
+    // eslint-disable-next-line
   }, [])
 
 
@@ -49,7 +31,7 @@ const CollectionDetails = () => {
             <img className='collection_logo' src={`https://svc.blockdaemon.com/nft/v1/ethereum/mainnet/media/${collectionDetail?.collection.logo}?apiKey=Ok-kPy1Xuy04MIozGNgbYUgN1brBgOgIDRGC1xAYZDwdSOBA`} alt="Logo" />
           </div>
           <div className='collection_name'>
-            <h3>{collectionDetail?.collection.name}</h3>
+            <a href={`https://looksrare.org/collections/${params.contract_address}`} target='_blank' rel='noreferrer'><h3>{collectionDetail?.collection.name}</h3></a>
             <a href={`https://etherscan.io/address/${params.contract_address}`} target='_blank' rel='noreferrer'>
               <p>{`${params.contract_address.slice(0, 5)}...${params.contract_address.slice(-5)}`}</p>
             </a>
@@ -58,22 +40,22 @@ const CollectionDetails = () => {
         <div className="collection_social_links">
           <div className="external_url social_logo">
             <a href={collectionDetail?.collection.meta?.external_url}>
-              <i class="fa-solid fa-globe"></i>
+              <i className="fa-solid fa-globe"></i>
             </a>
           </div>
           <div className="twitter social_logo">
             <a href={`https://twitter.com/${collectionDetail?.collection.meta?.twitter_username}`}>
-              <i class="fa-brands fa-twitter"></i>
+              <i className="fa-brands fa-twitter"></i>
             </a>
           </div>
           <div className="discord social_logo">
             <a href={collectionDetail?.collection.meta?.discord_url}>
-              <i class="fa-brands fa-discord"></i>
+              <i className="fa-brands fa-discord"></i>
             </a>
           </div>
           <div className="instagram social_logo">
             <a href={collectionDetail?.collection.meta?.instagram}>
-              <i class="fa-brands fa-square-instagram"></i>
+              <i className="fa-brands fa-square-instagram"></i>
             </a>
           </div>
         </div>

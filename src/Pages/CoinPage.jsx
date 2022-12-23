@@ -16,7 +16,7 @@ const CoinPage = () => {
     const data = await res.json();
     setCoinData(data);
   }
-  // console.log(coinData);
+
   useEffect(() => {
     fetchSingleCoin()
   }, [])
@@ -49,4 +49,4 @@ const CoinPage = () => {
   )
 }
 
-export default CoinPage
+export default CoinPage;

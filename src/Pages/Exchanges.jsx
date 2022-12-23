@@ -7,7 +7,6 @@ const Exchanges = () => {
     const fetchExchangesData = async () => {
         const res = await fetch('https://api.coingecko.com/api/v3/exchanges?per_page=10');
         const data = await res.json();
-        // console.log(data);
         setExchangesData(data);
     }
 
@@ -30,8 +29,8 @@ const Exchanges = () => {
                 </div>
                 <div className="exchange-cards-map">
                     {
-                        exchangesData.map((exchange) => (
-                            <ExchangeCard data={exchange} />
+                        exchangesData.map((exchange, index) => (
+                            <ExchangeCard key={index} data={exchange} />
                         ))
                     }
                 </div>
@@ -40,4 +39,4 @@ const Exchanges = () => {
     )
 }
 
-export default Exchanges
+export default Exchanges;

@@ -1,7 +1,6 @@
 import React from 'react'
 
 const ExchangeCard = ({ data }) => {
-    // console.log('cards',data);
 
     const priceWithCommas = (price) => {
         return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -25,4 +24,4 @@ const ExchangeCard = ({ data }) => {
     )
 }
 
-export default ExchangeCard
+export default ExchangeCard;

@@ -34,15 +34,8 @@ const ContextProvider = ({ children }) => {
         return data;
     }
 
-    const getAssetsForAddress = async (contract_address) => {
-        const url = `https://svc.blockdaemon.com/nft/v1/ethereum/mainnet/assets?contract_address=${contract_address}`;
-        const res = await fetch(url, BLOCK_DAEMON_OPTIONS);
-        const data = await res.json();
-        console.log(data);
-    }
-
     return (
-        <context.Provider value={{ getAllNFTCollection, getContractDetails, getAssetsForAddress }}>
+        <context.Provider value={{ getAllNFTCollection, getContractDetails }}>
             {children}
         </context.Provider>
     )

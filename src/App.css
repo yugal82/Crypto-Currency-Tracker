@@ -235,11 +235,8 @@ li {
   border: 1px solid #fff;
 }
 
-.search-box i {
-  position: absolute;
-  top: 1.63rem;
-  right: 4rem;
-  font-size: 0.9rem;
+.search-box input::placeholder {
+  color: #fff;
 }
 
 /* coinpage css */
@@ -405,7 +402,7 @@ li {
   width: 280px;
   height: 340px;
   border-radius: 0.5rem;
-  border: 2px solid #333;
+  border: 2px solid rgb(178, 178, 178);
   transition: all 0.3s ease-in;
   box-shadow: 5px 5px 10px rgb(222, 222, 222);
 }

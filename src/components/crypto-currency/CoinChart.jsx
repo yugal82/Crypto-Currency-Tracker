@@ -15,7 +15,6 @@ const CoinChart = ({ coin }) => {
         setHistoricData(data.prices);
     }
 
-    // console.log(historicData);
 
     const data = {
         labels: historicData?.map((coin) => {
@@ -73,4 +72,4 @@ const CoinChart = ({ coin }) => {
     )
 }
 
-export default CoinChart
+export default CoinChart;

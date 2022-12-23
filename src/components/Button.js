@@ -6,4 +6,4 @@ const Button = ({placeholder, onClick}) => {
   )
 }
 
-export default Button
+export default Button;
