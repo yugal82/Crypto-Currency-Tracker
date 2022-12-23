@@ -1,22 +1,10 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import { context } from '../../../Context/ContextProvider';
 import CollectionCard from '../CollectionCard';
 
 const Collection = () => {
 
-  const { getAllNFTCollection } = useContext(context);
-
-  const [allCollections, setAllCollections] = useState([]);
-
-  const fetchCollections = async () => {
-    const collections = await getAllNFTCollection();
-    setAllCollections(collections.results);
-  }
-
-  useEffect(() => {
-    fetchCollections();
-  }, [])
-
+  const { allCollections } = useContext(context);
 
   return (
     <div className='container-fluid'>
@@ -25,7 +13,7 @@ const Collection = () => {
       </div>
       <div className='collection_container'>
         {
-          allCollections?.map((collection) => (
+          allCollections.results?.map((collection) => (
             <CollectionCard key={collection.key} collection={collection} />
           ))
         }

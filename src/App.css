@@ -404,6 +404,12 @@ li {
   height: 340px;
   border-radius: .5rem;
   border: 2px solid #333;
+  transition: all .3s ease-in;
+  box-shadow: 5px 5px 10px rgb(222, 222, 222);
+}
+
+.collection_card:hover{
+  transform: scale(1.05);
 }
 
 .collection_card .collection_img,

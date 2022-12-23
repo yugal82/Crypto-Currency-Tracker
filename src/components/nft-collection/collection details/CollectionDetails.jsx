@@ -11,18 +11,18 @@ const CollectionDetails = () => {
       method: 'GET',
       headers: {
         "Content-Type": "application/json",
-        authorization: `Bearer ${process.env.BLOCK_DAEMON_API}`
+        authorization: `Bearer Ok-kPy1Xuy04MIozGNgbYUgN1brBgOgIDRGC1xAYZDwdSOBA`
       }
     }
-    const url = `https://svc.blockdaemon.com/nft/v1/ethereum/mainnet/assets?contract_address=${params.contract_address}`
-    const res = await fetch(url,options);
+    const url = `https://svc.blockdaemon.com/nft/v1/ethereum/mainnet/assets?contract_address=${params.contract_address}`;
+    const res = await fetch(url, options);
     const data = await res.json();
     setCollectionDetail(data);
     console.log(data);
   }
 
   useEffect(() => {
-    getAssetsForAddress();
+    // getAssetsForAddress();
   }, [])
 
 
